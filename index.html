@@ -38,6 +38,7 @@
     			<td>
     				<button id="showhide-btn" onclick="showhideText()">👁️</button>
     			</td>
+          <td><button id="focus-face-btn" onclick="openModal('myModal-1')">🔎</button></td>
     		</tr>
     	</table>
     	
@@ -71,6 +72,9 @@
           <td>
             <button id="showhide-hand-btn" onclick="showhideHand()">👁️</button>
           </td>
+          <td>
+            <button id="focus-face-btn" onclick="openModal('myModal-2')">🔎</button>
+          </td>
         </tr>
       </table>
     	
@@ -99,6 +103,9 @@
         <tr>
           <td><button onclick="ear()">🔊</button></td>
           <td><button id="showhideEar-btn" onclick="showhideEar()">👁️</button></td>
+          <td>
+            <button id="focus-face-btn" onclick="openModal('myModal-3')">🔎</button>
+          </td>
         </tr>
       </table>
     	
@@ -127,6 +134,9 @@
         <tr>
           <td><button onclick="eye()">🔊</button></td>
           <td><button id="showhideEye-btn" onclick="showhideEye()">👁️</button></td>
+          <td>
+            <button id="focus-face-btn" onclick="openModal('myModal-4')">🔎</button>
+          </td>
         </tr>
       </table>
     	
@@ -137,7 +147,138 @@
   </label>
 </div>
 
+<!-- ============= Modal ============== -->
+<div id="myModal-1" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-1')">&times;</button>
+     <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="face-en-2">a face<br>/feɪs/</strong></td>
+              <td><img src="img/face.webp" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">khuôn mặt</div>
+      </div>
 
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="face()">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-face-btn2" onclick="displayEn_modal('face-en-2', 'showhide-face-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-2" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-2')">&times;</button>
+        <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="hand-en-2">a hand<br>/hænd/</strong></td>
+              <td><img src="img/hand.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">bàn tay</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="hand()">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-hand-btn2" onclick="displayEn_modal('hand-en-2', 'showhide-hand-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-3" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-3')">&times;</button>
+        <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="ear-en-2">an ear<br>/ɪr/</strong></td>
+              <td><img src="img/ear.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">tai</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="ear()">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-ear-btn2" onclick="displayEn_modal('ear-en-2', 'showhide-ear-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-4" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal()">&times;</button>
+    <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="eye-en-2">an eye<br>/aɪ/</strong></td>
+              <td><img src="img/human-eye.webp" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">mắt</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="eye()">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-eye-btn2" onclick="displayEn_modal('eye-en-2', 'showhide-eye-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
 
 <script src="script.js"></script>
 
