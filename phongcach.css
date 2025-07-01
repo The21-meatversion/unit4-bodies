@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    /* Đảm bảo body có chiều cao tối thiểu bằng màn hình */
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.lesson-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 800px;
+}
+.lesson-item {
+    margin: 10px 0;
+}
+.lesson-button {
+    width: 80%;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #03A791;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+}
+.lesson-button:hover {
+    background-color: #FF8282;
+}
+/* Đảm bảo cuộn mượt mà */
+
+html {
+    scroll-behavior: smooth;
+}
+
+#unit4 {
+    color: white;
+    background-color: #4ED7F1;
+    text-decoration: none;
+    animation: blinkBackground 1s infinite;
+}
+
+@keyframes blinkBackground {
+    0%   { background-color: #4ED7F1; }
+    50%  { background-color: #FF8282; }
+    100% { background-color: #FFE893; }
+}
