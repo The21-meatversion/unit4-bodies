@@ -172,6 +172,10 @@ button:hover {
   background-color: #ffe852;
 }
 
+.numbers {
+  background-color: #FFFDF6;
+}
+
 /*---------modal---------*/
 .modal {
     display: none;
