@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Unit 4: Our bodies</title>
+  <link rel="icon" type="image/png" href="img/four.png">
+	<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="title-line">
+  <h3>Unit 4: Our bodies</h3>
+  <button onclick="toggleFullScreen()" class="fullscreen-btn">⛶</button>
+</div>
+
+<div class="grid-container">
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="eng-word" style="display: none;">a face<br>/feɪs/</strong></td>
+            <td><img src="img/face.webp" style="max-width: 50%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">khuôn mặt</div>
+    </div>
+
+    <div class="buttons">
+    	<table>
+    		<tr>
+    			<td>
+    				<button onclick="face()">🔊</button>
+    			</td>
+    			<td>
+    				<button id="showhide-btn" onclick="showhideText()">👁️</button>
+    			</td>
+    		</tr>
+    	</table>
+    	
+    	<audio id="face">
+    		<source src="sounds/face.ogg" type="audio/ogg">
+    	</audio>
+    </div>
+  </label>
+
+  <!-- Thêm 3 card nữa -->
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="hand-en" style="display: none">a hand<br>/hænd/</strong></td>
+            <td><img src="img/hand.jpg" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">bàn tay</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td>
+            <button onclick="hand()">🔊</button>
+          </td>
+          <td>
+            <button id="showhide-hand-btn" onclick="showhideHand()">👁️</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="hand">
+    		<source src="sounds/hand.wav" type="audio/wav">
+    	</audio>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="ear-en" style="display: none">an ear<br>/ɪr/</strong></td>
+            <td><img src="img/ear.jpg" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">tai</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button onclick="ear()">🔊</button></td>
+          <td><button id="showhideEar-btn" onclick="showhideEar()">👁️</button></td>
+        </tr>
+      </table>
+    	
+    	<audio id="ear">
+    		<source src="sounds/ear.wav" type="audio/wav">
+    	</audio>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="eye-en" style="display: none">an eye<br>/aɪ/</strong></td>
+            <td><img src="img/human-eye.webp" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">mắt</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button onclick="eye()">🔊</button></td>
+          <td><button id="showhideEye-btn" onclick="showhideEye()">👁️</button></td>
+        </tr>
+      </table>
+    	
+    	<audio id="eye">
+    		<source src="sounds/aye.wav" type="audio/wav">
+    	</audio>
+    </div>
+  </label>
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
