@@ -1,0 +1,213 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #F17563;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  color: #222;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* GRID chính */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 500px);  /* 2 cột cố định */
+  grid-template-rows: repeat(2, 240px);     /* 2 hàng cố định */
+  gap: 80px;
+  margin-top: 10px;
+}
+
+/* Mỗi card bọc trong label */
+label {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Thẻ card */
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 600ms;
+  z-index: 20;
+}
+
+.card div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #FFF;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+.card .back {
+  background: #404040;
+  color: #FFF;
+  font-size: 70px;
+  transform: rotateX(180deg);
+}
+
+label:hover .card {
+  transform: rotateX(10deg);
+  box-shadow: 0 20px 20px rgba(50, 50, 50, 0.2);
+  border: 8px solid gold;
+  border-radius: 18px;
+}
+
+input {
+  display: none;
+}
+
+:checked + .card {
+  transform: rotateX(180deg);
+}
+
+label:hover :checked + .card {
+  transform: rotateX(170deg);
+  box-shadow: 0 20px 20px rgba(255, 255, 255, 0.2);
+}
+
+img {
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto 10px;
+}
+
+
+
+button {
+  font-size: 24px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #4c89af;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffe852;
+}
+
+
+/* Căn giữa mọi nội dung trong ô */
+.card table {
+  width: 100%;
+  height: 100%;
+}
+
+/* Căn giữa ảnh theo cả chiều ngang và dọc */
+.card td {
+  text-align: center;
+  vertical-align: middle;
+  height: 100%;
+  padding: 0;
+}
+
+/* Định dạng ảnh trong bảng */
+.card td img {
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center; /* căn giữa theo chiều ngang */
+  gap: 20px; /* khoảng cách giữa các nút */
+}
+
+
+.title-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #fafafa;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  position: fixed;      /* giữ cố định ở trên cùng */
+  top: 0;
+  left: 0;
+  z-index: 1000;        /* đảm bảo nó nằm trên cùng */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.fullscreen-btn {
+  font-size: 20px;
+  margin-left: 10px;
+  padding: 6px 12px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background-color 0.3s ease;
+}
+
+.fullscreen-btn:hover {
+  background-color: #ffe852;
+}
+
+.numbers {
+  background-color: #FFFDF6;
+}
+
+/*---------modal---------*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-content {
+    background-color: #FFBD73;
+    width: 70%;
+    max-width: 1000px;
+    height: 90%;
+    border-radius: 10px;
+    position: relative;
+    overflow: auto;
+    padding: 100px;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background: silver;
+    border: none;
+}
+.close-btn:hover {
+  background-color: #FF6363;
+}

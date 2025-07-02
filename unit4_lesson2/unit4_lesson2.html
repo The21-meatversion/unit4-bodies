@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Unit 4 - Lesson 2</title>
+  <link rel="icon" type="image/png" href="img/four.png">
+	<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="title-line">
+  <a class="fullscreen-btn" href="../index.html">📃</a>
+  <h3>Unit 4 - Lesson 2</h3>
+  <button onclick="toggleFullScreen()" class="fullscreen-btn">⛶</button>
+</div>
+
+<div class="grid-container">
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="touch-hair-vocab" style="display: none;">touch/hair<br>/tʌtʃ/ /her/</strong></td>
+            <td><img src="img/touch_hair.jpg" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">chạm / tóc</div>
+    </div>
+
+    <div class="buttons">
+    	<table>
+    		<tr>
+    			<td>
+    				<button onclick="playAudio('touch1','hair')">🔊</button>
+    			</td>
+    			<td>
+    				<button id="showhide-touch-hair-btn" onclick="showhideVocab('touch-hair-vocab','showhide-touch-hair-btn')">👁️</button>
+    			</td>
+          <td><button id="focus-btn" onclick="openModal('myModal-1')">🔎</button></td>
+          <td>
+            <button class="numbers">1️⃣</button>
+          </td>
+    		</tr>
+    	</table>
+    	
+    	<audio id="touch1">
+    		<source src="sounds/touch.mp3" type="audio/mp3">
+    	</audio>
+      <audio id="hair">
+        <source src="sounds/hair.mp3" type="audio/mp3">
+      </audio>
+    </div>
+  </label>
+
+  <!-- Thêm 3 card nữa -->
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="touch-ear-vocab" style="display: none">touch/ear<br>/tʌtʃ/ /ɪr/</strong></td>
+            <td><img src="img/touch_ear.jpg" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">chạm / tai</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td>
+            <button onclick="playAudio('touch2','ear')">🔊</button>
+          </td>
+          <td>
+            <button id="showhide-touch-ear-btn" onclick="showhideVocab('touch-ear-vocab','showhide-touch-ear-btn')">👁️</button>
+          </td>
+          <td>
+            <button id="focus-btn" onclick="openModal('myModal-2')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">2️⃣</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="ear">
+    		<source src="sounds/ear.mp3" type="audio/mp3">
+    	</audio>
+      <audio id="touch2">
+        <source src="sounds/touch.mp3" type="audio/mp3">
+      </audio>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="open-mouth-vocab" style="display: none">open/mouth<br>/ˈoʊ.pən/ /maʊθ/</strong></td>
+            <td><img src="img/open_mouth.jpg" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">mở / miệng</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button onclick="playAudio('open1','mouth')">🔊</button></td>
+          <td><button id="showhide-open-mouth-btn" onclick="showhideVocab('open-mouth-vocab','showhide-open-mouth-btn')">👁️</button></td>
+          <td>
+            <button id="focus-btn" onclick="openModal('myModal-3')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">3️⃣</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="open1">
+    		<source src="sounds/open.mp3" type="audio/mp3">
+    	</audio>
+      <audio id="mouth">
+        <source src="sounds/mouth.mp3" type="audio/mp3">
+      </audio>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="open-eyes-vocab" style="display: none">open/eyes<br>/ˈoʊ.pən/ /ˈaɪz/</strong></td>
+            <td><img src="img/open_eyes.jpg" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">mở / mắt</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button onclick="playAudio('open2','eyes')">🔊</button></td>
+          <td><button id="showhide-open-eyes-btn" onclick="showhideVocab('open-eyes-vocab', 'showhide-open-eyes-btn')">👁️</button></td>
+          <td>
+            <button id="focus-btn" onclick="openModal('myModal-4')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">4️⃣</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="eyes">
+    		<source src="sounds/eyes.mp3" type="audio/mp3">
+    	</audio>
+      <audio id="open2">
+        <source src="sounds/open.mp3" type="audio/mp3">
+      </audio>
+    </div>
+  </label>
+</div>
+
+<!-- ============= Modal ============== -->
+<div id="myModal-1" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-1')">&times;</button>
+     <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="touch-hair-en-2" style="display: none">touch/hair<br>/tʌtʃ/ /her/</strong></td>
+              <td><img src="img/touch_hair.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">chạm / tóc</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('touch1','hair')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-touch-hair-btn2" onclick="displayEn_modal('touch-hair-en-2', 'showhide-touch-hair-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-2" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-2')">&times;</button>
+        <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="touch-ear-en-2" style="display: none">touch/ear<br>/tʌtʃ/ /ɪr/</strong></td>
+              <td><img src="img/touch_ear.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">chạm / tai</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('touch2', 'ear')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-touch-ear-btn2" onclick="displayEn_modal('touch-ear-en-2', 'showhide-touch-ear-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-3" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-3')">&times;</button>
+        <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="open-mouth-en-2" style="display: none">open/mouth<br>/ˈoʊ.pən/ /maʊθ/</strong></td>
+              <td><img src="img/open_mouth.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">mở / miệng</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('open1','mouth')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-open-mouth-btn2" onclick="displayEn_modal('open-mouth-en-2', 'showhide-open-mouth-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-4" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('myModal-4')">&times;</button>
+    <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="open-eyes-en-2" style="display: none">open/eyes<br>/ˈoʊ.pən/ /ˈaɪz/</strong></td>
+              <td><img src="img/open_eyes.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">mở / mắt</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('open2','eyes')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-open-eyes-btn2" onclick="displayEn_modal('open-eyes-en-2', 'showhide-open-eyes-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

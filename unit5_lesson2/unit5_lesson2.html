@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Unit 5 - Lesson 2</title>
+  <link rel="icon" type="image/png" href="img/five.png">
+	<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="title-line">
+  <a class="fullscreen-btn" href="../index.html">📃</a>
+  <h3>Unit 5 - Lesson 2</h3>
+  <button onclick="toggleFullScreen()" class="fullscreen-btn">⛶</button>
+</div>
+
+<div class="grid-container">
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="running-vocab" style="display: none;">running<br>/ˈrʌn.ɪŋ/</strong></td>
+            <td><img src="img/running.jpg" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">chạy</div>
+    </div>
+
+    <div class="buttons">
+    	<table>
+    		<tr>
+    			<td>
+    				<button onclick="playAudio('running')">🔊</button>
+    			</td>
+    			<td>
+    				<button id="showhide-running-btn" onclick="showhideVocab('running-vocab','showhide-running-btn')">👁️</button>
+    			</td>
+          <td><button id="focus-btn" onclick="openModal('myModal-1')">🔎</button></td>
+          <td>
+            <button class="numbers">1️⃣</button>
+          </td>
+    		</tr>
+    	</table>
+    	
+    	<audio id="running">
+    		<source src="sounds/running.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+
+  <!-- Thêm 3 card nữa -->
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="painting-vocab" style="display: none">painting<br>/ˈpeɪn.t̬ɪŋ/</strong></td>
+            <td><img src="img/painting.jpg" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">vẽ</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td>
+            <button onclick="playAudio('painting')">🔊</button>
+          </td>
+          <td>
+            <button id="showhide-painting-btn" onclick="showhideVocab('painting-vocab','showhide-painting-btn')">👁️</button>
+          </td>
+          <td>
+            <button id="focus-btn" onclick="openModal('myModal-2')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">2️⃣</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="painting">
+    		<source src="sounds/painting.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="walking-vocab" style="display: none">walking<br>/ˈwɑː.kɪŋ/</strong></td>
+            <td><img src="img/walking.jpg" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">đi bộ</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button onclick="playAudio('walking')">🔊</button></td>
+          <td><button id="showhide-walking-btn" onclick="showhideVocab('walking-vocab','showhide-walking-btn')">👁️</button></td>
+          <td>
+            <button id="focus-btn" onclick="openModal('myModal-3')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">3️⃣</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="walking">
+    		<source src="sounds/walking.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="cooking-vocab" style="display: none">cooking<br>/ˈkʊk.ɪŋ/</strong></td>
+            <td><img src="img/cooking.jpg" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">nấu ăn</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button onclick="playAudio('cooking')">🔊</button></td>
+          <td><button id="showhide-cooking-btn" onclick="showhideVocab('cooking-vocab', 'showhide-cooking-btn')">👁️</button></td>
+          <td>
+            <button id="focus-btn" onclick="openModal('myModal-4')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">4️⃣</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="cooking">
+    		<source src="sounds/cooking.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+</div>
+
+<!-- ============= Modal ============== -->
+<div id="myModal-1" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-1')">&times;</button>
+     <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="running-en-2" style="display: none">running<br>/ˈrʌn.ɪŋ/</strong></td>
+              <td><img src="img/running.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">chạy</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('running')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-running-btn2" onclick="displayEn_modal('running-en-2', 'showhide-running-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-2" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-2')">&times;</button>
+        <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="painting-en-2" style="display: none">painting<br>/ˈpeɪn.t̬ɪŋ/</strong></td>
+              <td><img src="img/painting.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">vẽ</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('painting')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-painting-btn2" onclick="displayEn_modal('painting-en-2', 'showhide-painting-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-3" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-3')">&times;</button>
+        <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="walking-en-2" style="display: none">walking<br>/ˈwɑː.kɪŋ/</strong></td>
+              <td><img src="img/walking.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">đi bộ</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('walking')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-walking-btn2" onclick="displayEn_modal('walking-en-2', 'showhide-walking-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-4" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('myModal-4')">&times;</button>
+    <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="cooking-en-2" style="display: none">cooking<br>/ˈkʊk.ɪŋ/</strong></td>
+              <td><img src="img/cooking.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">nấu ăn</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('cooking')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-cooking-btn2" onclick="displayEn_modal('cooking-en-2', 'showhide-cooking-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
