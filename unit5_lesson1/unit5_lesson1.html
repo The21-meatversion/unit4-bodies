@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Unit 5 - Lesson 1</title>
+  <link rel="icon" type="image/png" href="img/five.png">
+	<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="title-line">
+  <h3>Unit 5 - Lesson 1</h3>
+  <button onclick="toggleFullScreen()" class="fullscreen-btn">⛶</button>
+</div>
+
+<div class="grid-container">
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="singing-vocab" style="display: none;">singing<br>/ˈsɪŋ.ɪŋ/</strong></td>
+            <td><img src="img/singing.jpg" style="max-width: 50%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">hát</div>
+    </div>
+
+    <div class="buttons">
+    	<table>
+    		<tr>
+    			<td>
+    				<button onclick="playAudio('singing')">🔊</button>
+    			</td>
+    			<td>
+    				<button id="showhide-singing-btn" onclick="showhideVocab('singing-vocab','showhide-singing-btn')">👁️</button>
+    			</td>
+          <td><button id="focus-btn" onclick="openModal('myModal-1')">🔎</button></td>
+          <td>
+            <button class="numbers">1️⃣</button>
+          </td>
+    		</tr>
+    	</table>
+    	
+    	<audio id="singing">
+    		<source src="sounds/singing.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+
+  <!-- Thêm 3 card nữa -->
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="drawing-vocab" style="display: none">drawing<br>/ˈdrɑː.ɪŋ/</strong></td>
+            <td><img src="img/drawing.webp" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">vẽ</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td>
+            <button onclick="playAudio('drawing')">🔊</button>
+          </td>
+          <td>
+            <button id="showhide-drawing-btn" onclick="showhideVocab('drawing-vocab','showhide-drawing-btn')">👁️</button>
+          </td>
+          <td>
+            <button id="focus-btn" onclick="openModal('myModal-2')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">2️⃣</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="drawing">
+    		<source src="sounds/drawing.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="dancing-vocab" style="display: none">dancing<br>/ˈdæn.sɪŋ/</strong></td>
+            <td><img src="img/dancing.webp" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">nhảy</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button onclick="playAudio('dancing')">🔊</button></td>
+          <td><button id="showhide-dancing-btn" onclick="showhideVocab('dancing-vocab','showhide-dancing-btn')">👁️</button></td>
+          <td>
+            <button id="focus-btn" onclick="openModal('myModal-3')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">3️⃣</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="dancing">
+    		<source src="sounds/dancing.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="swimming-vocab" style="display: none">swimming<br>/ˈswɪm.ɪŋ/</strong></td>
+            <td><img src="img/swimming.webp" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">bơi</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button onclick="playAudio('swimming')">🔊</button></td>
+          <td><button id="showhide-swimming-btn" onclick="showhideVocab('swimming-vocab', 'showhide-swimming-btn')">👁️</button></td>
+          <td>
+            <button id="focus-btn" onclick="openModal('myModal-4')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">4️⃣</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="swimming">
+    		<source src="sounds/swimming.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+</div>
+
+<!-- ============= Modal ============== -->
+<div id="myModal-1" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-1')">&times;</button>
+     <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="singing-en-2">singing<br>/ˈsɪŋ.ɪŋ/</strong></td>
+              <td><img src="img/singing.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">hát</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('singing')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-singing-btn2" onclick="displayEn_modal('singing-en-2', 'showhide-singing-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-2" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-2')">&times;</button>
+        <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="drawing-en-2">drawing<br>/ˈdrɑː.ɪŋ/</strong></td>
+              <td><img src="img/drawing.webp" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">vẽ</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('drawing')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-drawing-btn2" onclick="displayEn_modal('drawing-en-2', 'showhide-drawing-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-3" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-3')">&times;</button>
+        <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="dancing-en-2">dancing<br>/ˈdæn.sɪŋ/</strong></td>
+              <td><img src="img/dancing.webp" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">nhảy</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('dancing')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-dancing-btn2" onclick="displayEn_modal('dancing-en-2', 'showhide-dancing-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-4" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('myModal-4')">&times;</button>
+    <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="swimming-en-2">swimming<br>/ˈswɪm.ɪŋ/</strong></td>
+              <td><img src="img/swimming.webp" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">bơi</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('swimming')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-swimming-btn2" onclick="displayEn_modal('swimming-en-2', 'showhide-swimming-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

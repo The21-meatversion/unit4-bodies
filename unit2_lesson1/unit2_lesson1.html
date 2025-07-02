@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Unit 2: Lesson 1</title>
+  <link rel="icon" type="image/png" href="img/two.png">
+	<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="title-line">
+  <h3>Unit 2: Lesson 1</h3>
+  <button onclick="toggleFullScreen()" class="fullscreen-btn">⛶</button>
+</div>
+
+<div class="grid-container">
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="paint-en" style="display: none;">paint<br>/peɪnt/</strong></td>
+            <td><img src="img/paint.jpg" style="max-width: 50%; max-height: 150px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">sơn</div>
+    </div>
+
+    <div class="buttons">
+    	<table>
+    		<tr>
+    			<td>
+    				<button onclick="playAudio('paint')">🔊</button>
+    			</td>
+    			<td>
+    				<button id="showhide-paint-btn" onclick="showhideVocab('paint-en', 'showhide-paint-btn')">👁️</button>
+    			</td>
+          <td><button id="focus-face-btn" onclick="openModal('myModal-1')">🔎</button></td>
+          <td>
+            <button class="numbers">1️⃣</button>
+          </td>
+    		</tr>
+    	</table>
+    	
+    	<audio id="paint">
+    		<source src="sounds/paint.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+
+  <!-- Thêm 3 card nữa -->
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="paper-en" style="display: none">paper<br>/ˈpeɪ.pɚ/</strong></td>
+            <td><img src="img/paper.webp" style="max-width: 80%; max-height: 150px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">giấy</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td>
+            <button onclick="playAudio('paper')">🔊</button>
+          </td>
+          <td>
+            <button id="showhide-paper-btn" onclick="showhideVocab('paper-en','showhide-paper-btn')">👁️</button>
+          </td>
+          <td>
+            <button id="focus-face-btn" onclick="openModal('myModal-2')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">2️⃣</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="paper">
+    		<source src="sounds/paper.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="chalk-en" style="display: none">chalk<br>/tʃɑːk/</strong></td>
+            <td><img src="img/chalk.jpg" style="max-width: 80%; max-height: 150px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">phấn</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button onclick="playAudio('chalk')">🔊</button></td>
+          <td><button id="showhide-chalk-btn" onclick="showhideVocab('chalk-en','showhide-chalk-btn')">👁️</button></td>
+          <td>
+            <button id="focus-face-btn" onclick="openModal('myModal-3')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">3️⃣</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="chalk">
+    		<source src="sounds/chalk.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="yarn-en" style="display: none">yarn<br>/jɑːrn/</strong></td>
+            <td><img src="img/yarn.jpg" style="max-width: 80%; max-height: 150px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">sợi len</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button onclick="playAudio('yarn')">🔊</button></td>
+          <td><button id="showhide-yarn-btn" onclick="showhideVocab('yarn-en','showhide-yarn-btn')">👁️</button></td>
+          <td>
+            <button id="focus-face-btn" onclick="openModal('myModal-4')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">4️⃣</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="yarn">
+    		<source src="sounds/yarn.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="glue-en" style="display: none">glue<br>/ɡluː/</strong></td>
+            <td><img src="img/glue.webp" style="max-width: 80%; max-height: 150px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">keo</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button onclick="playAudio('glue')">🔊</button></td>
+          <td><button id="showhide-glue-btn" onclick="showhideVocab('glue-en','showhide-glue-btn')">👁️</button></td>
+          <td>
+            <button id="focus-face-btn" onclick="openModal('myModal-5')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">5️⃣</button>
+          </td>
+        </tr>
+      </table>
+      
+      <audio id="glue">
+        <source src="sounds/glue.mp3" type="audio/mp3">
+      </audio>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="tape-en" style="display: none">tape<br>/teɪp/</strong></td>
+            <td><img src="img/tape.jpg" style="max-width: 80%; max-height: 150px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">băng dính</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button onclick="playAudio('tape')">🔊</button></td>
+          <td><button id="showhide-tape-btn" onclick="showhideVocab('tape-en','showhide-tape-btn')">👁️</button></td>
+          <td>
+            <button id="focus-face-btn" onclick="openModal('myModal-6')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">6️⃣</button>
+          </td>
+        </tr>
+      </table>
+      
+      <audio id="tape">
+        <source src="sounds/tape.mp3" type="audio/mp3">
+      </audio>
+    </div>
+  </label>
+</div>
+
+<!-- ============= Modal ============== -->
+<div id="myModal-1" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-1')">&times;</button>
+     <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="paint-en-2">paint<br>/peɪnt/</strong></td>
+              <td><img src="img/paint.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">sơn</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('paint')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-paint-btn2" onclick="displayEn_modal('paint-en-2', 'showhide-paint-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-2" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-2')">&times;</button>
+        <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="paper-en-2">paper<br>/ˈpeɪ.pɚ/</strong></td>
+              <td><img src="img/paper.webp" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">giấy</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('paper')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-paper-btn2" onclick="displayEn_modal('paper-en-2', 'showhide-paper-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-3" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-3')">&times;</button>
+        <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="chalk-en-2">chalk<br>/tʃɑːk/</strong></td>
+              <td><img src="img/chalk.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">phấn</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('chalk')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-chalk-btn2" onclick="displayEn_modal('chalk-en-2', 'showhide-chalk-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-4" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('myModal-4')">&times;</button>
+    <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="yarn-en-2">yarn<br>/jɑːrn/</strong></td>
+              <td><img src="img/yarn.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">sợi len</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('yarn')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-yarn-btn2" onclick="displayEn_modal('yarn-en-2', 'showhide-yarn-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-5" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('myModal-5')">&times;</button>
+    <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="glue-en-2">glue<br>/ɡluː/</strong></td>
+              <td><img src="img/glue.webp" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">keo</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('glue')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-glue-btn2" onclick="displayEn_modal('glue-en-2', 'showhide-glue-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-6" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('myModal-6')">&times;</button>
+    <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="tape-en-2">tape<br>/teɪp/</strong></td>
+              <td><img src="img/tape.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">băng dính</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('tape')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-tape-btn2" onclick="displayEn_modal('tape-en-2', 'showhide-tape-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

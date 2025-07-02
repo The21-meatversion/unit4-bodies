@@ -35,17 +35,33 @@ h1 {
     margin: 0 auto;
     text-align: center;
     text-decoration: none;
+
+    /* Hiệu ứng mượt */
+    transition: all 0.2s ease-in-out;
+
+    /* Nút phẳng ban đầu */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .lesson-button:hover {
     background-color: #FF8282;
-}
-/* Đảm bảo cuộn mượt mà */
 
+    /* Di chuyển lên một chút */
+    transform: translateY(-3px);
+
+    /* Bóng đậm hơn để tạo hiệu ứng nổi */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.lesson-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Đảm bảo cuộn mượt mà */
 html {
     scroll-behavior: smooth;
 }
 
-#unit4 {
+#completed_4, #completed_5, #completed_2 {
     color: white;
     background-color: #4ED7F1;
     text-decoration: none;
