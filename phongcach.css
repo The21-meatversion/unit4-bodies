@@ -67,12 +67,12 @@ html {
     scroll-behavior: smooth;
 }
 
-#completed_4, #completed_5, #completed_2, #completed_4_2, #completed_5_2, #completed_6_1 {
+/*#completed_4, #completed_5, #completed_2, #completed_4_2, #completed_5_2, #completed_6_1 {
     color: white;
     background-color: #4ED7F1;
     text-decoration: none;
     animation: blinkBackground 1s infinite;
-}
+}*/
 
 @keyframes blinkBackground {
     0%   { background-color: #4ED7F1; }

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Unit 3 - Lesson 4</title>
+  <link rel="icon" type="image/png" href="img/three.png">
+	<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="title-line">
+  <a class="fullscreen-btn" href="../index.html">📃</a>
+  <h3>Unit 3 - Lesson 4: Toys</h3>
+  <button onclick="toggleFullScreen()" class="fullscreen-btn">⛶</button>
+</div>
+
+<div class="grid-container">
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="game-vocab" style="display: none;">game<br>/ɡeɪm/</strong></td>
+            <td><img src="img/game.jpg" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">trò chơi</div>
+    </div>
+
+    <div class="buttons">
+    	<table>
+    		<tr>
+    			<td>
+    				<button onclick="playAudio('game')">🔊</button>
+    			</td>
+    			<td>
+    				<button id="showhide-game-btn" onclick="showhideVocab('game-vocab','showhide-game-btn')">👁️</button>
+    			</td>
+          <td><button id="focus-btn" onclick="openModal('myModal-1')">🔎</button></td>
+          <td>
+            <button class="numbers">1️⃣</button>
+          </td>
+    		</tr>
+    	</table>
+    	
+    	<audio id="game">
+    		<source src="sounds/game.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+
+  <!-- Thêm 3 card nữa -->
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="marble-vocab" style="display: none">marble<br>/ˈmɑːr.bəl/</strong></td>
+            <td><img src="img/marble.jpg" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">hòn bi</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td>
+            <button onclick="playAudio('marble')">🔊</button>
+          </td>
+          <td>
+            <button id="showhide-marble-btn" onclick="showhideVocab('marble-vocab','showhide-marble-btn')">👁️</button>
+          </td>
+          <td>
+            <button id="focus-btn" onclick="openModal('myModal-2')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">2️⃣</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="marble">
+    		<source src="sounds/marble.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="puzzle-vocab" style="display: none">puzzle<br>/ˈpʌz.əl/</strong></td>
+            <td><img src="img/puzzle.jpg" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">xếp hình</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button onclick="playAudio('puzzle')">🔊</button></td>
+          <td><button id="showhide-puzzle-btn" onclick="showhideVocab('puzzle-vocab','showhide-puzzle-btn')">👁️</button></td>
+          <td>
+            <button id="focus-btn" onclick="openModal('myModal-3')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">3️⃣</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="puzzle">
+    		<source src="sounds/puzzle.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+
+  <label>
+    <input type="checkbox" />
+    <div class="card">
+      <div class="front">
+        <table>
+          <tr>
+            <td><strong id="card-vocab" style="display: none">card<br>/kɑːrd/</strong></td>
+            <td><img src="img/card.jpg" style="max-width: 80%; max-height: 200px;"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="back">thẻ</div>
+    </div>
+
+    <div class="buttons">
+      <table>
+        <tr>
+          <td><button onclick="playAudio('card')">🔊</button></td>
+          <td><button id="showhide-card-btn" onclick="showhideVocab('card-vocab', 'showhide-card-btn')">👁️</button></td>
+          <td>
+            <button id="focus-btn" onclick="openModal('myModal-4')">🔎</button>
+          </td>
+          <td>
+            <button class="numbers">4️⃣</button>
+          </td>
+        </tr>
+      </table>
+    	
+    	<audio id="card">
+    		<source src="sounds/card.mp3" type="audio/mp3">
+    	</audio>
+    </div>
+  </label>
+</div>
+
+<!-- ============= Modal ============== -->
+<div id="myModal-1" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-1')">&times;</button>
+     <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="game-en-2" style="display: none">game<br>/ɡeɪm/</strong></td>
+              <td><img src="img/game.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">trò chơi</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('game')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-game-btn2" onclick="displayEn_modal('game-en-2', 'showhide-game-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-2" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-2')">&times;</button>
+        <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="marble-en-2" style="display: none">marble<br>/ˈmɑːr.bəl/</strong></td>
+              <td><img src="img/marble.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">hòn bi</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('marble')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-marble-btn2" onclick="displayEn_modal('marble-en-2', 'showhide-marble-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-3" class="modal">
+  <div class="modal-content">
+     <button class="close-btn" onclick="closeModal('myModal-3')">&times;</button>
+        <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="puzzle-en-2" style="display: none">puzzle<br>/ˈpʌz.əl/</strong></td>
+              <td><img src="img/puzzle.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">xếp hình</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('puzzle')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-puzzle-btn2" onclick="displayEn_modal('puzzle-en-2', 'showhide-puzzle-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<div id="myModal-4" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('myModal-4')">&times;</button>
+    <label>
+      <input type="checkbox" />
+      <div class="card">
+        <div class="front">
+          <table>
+            <tr>
+              <td><strong id="card-en-2" style="display: none">card<br>/kɑːrd/</strong></td>
+              <td><img src="img/card.jpg" style="max-width: 80%; max-height: 300px;"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="back">thẻ</div>
+      </div>
+
+      <div class="buttons">
+        <table>
+          <tr>
+            <td>
+              <button onclick="playAudio('card')">🔊</button>
+            </td>
+            <td>
+              <button id="showhide-card-btn2" onclick="displayEn_modal('card-en-2', 'showhide-card-btn2')">👁️</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </label>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
